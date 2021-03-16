@@ -1,20 +1,27 @@
 package project;
 
+import java.util.ArrayList;
+
 public class Canton {
+
+    public enum Languages {Deutsch, Französisch, Italienisch, Rätoromanisch};
+
     private String name;
     private int yearOfJoining;
     private int population;
-    private double area;
+    private int area;
     private String capital;
-    private String flag;
+    private ArrayList<Languages> languages;
+    private boolean active = false;
 
-    public Canton(String name, int yearOfJoining, int population, int area, String capital, String flag) {
-        this.name = name;
-        this.yearOfJoining = yearOfJoining;
-        this.population = population;
-        this.area = area;
-        this.capital = capital;
-        this.flag = flag;
+
+    public Canton() {
+        languages = new ArrayList<>();
+    }
+
+    public ArrayList<Languages> resetLanguages() {
+        languages = new ArrayList<>();
+        return languages;
     }
 
     public int getYearOfJoining() {
@@ -33,11 +40,11 @@ public class Canton {
         this.population = population;
     }
 
-    public double getArea() {
+    public int getArea() {
         return area;
     }
 
-    public void setArea(double area) {
+    public void setArea(int area) {
         this.area = area;
     }
 
@@ -57,11 +64,19 @@ public class Canton {
         this.capital = capital;
     }
 
-    public String getFlag() {
-        return flag;
+    public ArrayList<Languages> getLanguages() {
+        return languages;
     }
 
-    public void setFlag(String flag) {
-        this.flag = flag;
+    public void setLanguages(ArrayList<Languages> languages) {
+        this.languages = languages;
+    }
+
+    public boolean isActive() {
+        return active;
+    }
+
+    public void setActive(boolean active) {
+        this.active = active;
     }
 }
