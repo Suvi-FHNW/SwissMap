@@ -14,7 +14,6 @@ public class Canton {
     private ArrayList<Languages> languages;
     private boolean active = false;
 
-
     public Canton() {
         languages = new ArrayList<>();
     }

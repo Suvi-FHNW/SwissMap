@@ -7,8 +7,10 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
 import javafx.stage.Stage;
+import javafx.stage.WindowEvent;
 
 import java.util.ArrayList;
+import java.util.Optional;
 
 public class View {
     private Stage stage;
@@ -103,7 +105,7 @@ public class View {
         boxOverview.setTranslateX(50);
         return boxOverview;
     }
-
+    // TODO just for concept, needs to be refined
     private GridPane setRootCenter() {
         gridDetails = new GridPane();
         gridDetails.setId("portrait");
@@ -267,151 +269,92 @@ public class View {
         }
     }
 
-    public ArrayList<Label> getCantonChoice() {
-        return cantonChoice;
+    public void showErrorAlert(){
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setHeaderText("Ungültige Eingabe, kann leider nicht gespeichert werden");
+        alert.setContentText(model.getErrorMessage());
+        alert.show();
     }
 
-    public void setCantonChoice(ArrayList<Label> cantonChoice) {
-        this.cantonChoice = cantonChoice;
+    public void showSaveAlert() {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setHeaderText("Die Eingabe ist gültig");
+        alert.setContentText("Die Daten wurden gespeichert");
+        alert.show();
+    }
+
+    public void showCloseAlert(WindowEvent e) {
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setHeaderText("Möchten Sie die Daten vor dem Schliessen speichern?");
+        alert.setContentText("Falls die Daten nicht gespeichert werden, gehen alle Änderungen verloren.");
+        Optional<ButtonType> result = alert.showAndWait();
+        if(result.get() == ButtonType.OK) {
+            model.saveDataToFile();
+        }
+    }
+
+    public ArrayList<Label> getCantonChoice() {
+        return cantonChoice;
     }
 
     public Button getBtnEdit() {
         return btnEdit;
     }
 
-    public void setBtnEdit(Button btnEdit) {
-        this.btnEdit = btnEdit;
-    }
-
     public Button getBtnMap() {
         return btnMap;
-    }
-
-    public void setBtnMap(Button btnMap) {
-        this.btnMap = btnMap;
     }
 
     public Button getBtnSave() {
         return btnSave;
     }
 
-    public void setBtnSave(Button btnSave) {
-        this.btnSave = btnSave;
-    }
-
-    public Alert getEditWindow() {
-        return editWindow;
-    }
-
-    public void setEditWindow(Alert editWindow) {
-        this.editWindow = editWindow;
-    }
-
-    public Pane getRoot() {
-        return root;
-    }
-
     public Stage getStage() {
         return stage;
-    }
-
-    public void setStage(Stage stage) {
-        this.stage = stage;
     }
 
     public Label getLblName() {
         return lblName;
     }
 
-    public void setLblName(Label lblName) {
-        this.lblName = lblName;
-    }
-
     public TextField getTfName() {
         return tfName;
-    }
-
-    public void setTfName(TextField tfName) {
-        this.tfName = tfName;
     }
 
     public TextField getTfYearOfJoining() {
         return tfYearOfJoining;
     }
 
-    public void setTfYearOfJoining(TextField tfYearOfJoining) {
-        this.tfYearOfJoining = tfYearOfJoining;
-    }
-
     public TextField getTfPopulation() {
         return tfPopulation;
-    }
-
-    public void setTfPopulation(TextField tfPopulation) {
-        this.tfPopulation = tfPopulation;
     }
 
     public TextField getTfArea() {
         return tfArea;
     }
 
-    public void setTfArea(TextField tfArea) {
-        this.tfArea = tfArea;
-    }
-
     public TextField getTfCapital() {
         return tfCapital;
-    }
-
-    public void setTfCapital(TextField tfCapital) {
-        this.tfCapital = tfCapital;
-    }
-
-    public TextField getTfLanguage() {
-        return tfLanguage;
-    }
-
-    public void setTfLanguage(TextField tfLanguage) {
-        this.tfLanguage = tfLanguage;
     }
 
     public CheckBox getCheckBoxGerman() {
         return checkBoxGerman;
     }
 
-    public void setCheckBoxGerman(CheckBox checkBoxGerman) {
-        this.checkBoxGerman = checkBoxGerman;
-    }
-
     public CheckBox getCheckBoxFrench() {
         return checkBoxFrench;
-    }
-
-    public void setCheckBoxFrench(CheckBox checkBoxFrench) {
-        this.checkBoxFrench = checkBoxFrench;
     }
 
     public CheckBox getCheckBoxItalian() {
         return checkBoxItalian;
     }
 
-    public void setCheckBoxItalian(CheckBox checkBoxItalian) {
-        this.checkBoxItalian = checkBoxItalian;
-    }
-
     public CheckBox getCheckBoxRumantsch() {
         return checkBoxRumantsch;
-    }
-
-    public void setCheckBoxRumantsch(CheckBox checkBoxRumantsch) {
-        this.checkBoxRumantsch = checkBoxRumantsch;
     }
 
     public Button getBtnDelete() {
         return btnDelete;
     }
 
-    public void setBtnDelete(Button btnDelete) {
-        this.btnDelete = btnDelete;
-    }
 }

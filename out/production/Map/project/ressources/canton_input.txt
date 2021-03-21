@@ -1,0 +1,26 @@
+Aargau;1803;685424;1404;Aarau;D
+Appenzell Ausserrhoden;1513;55234;243;Herisau;D
+Appenzell Innerrhoden;1513;16145;172;Appenzell;D
+Basel-Landschaft;1501;288132;518;Liestal;D
+Basel-Stadt;1501;194766;37;Basel;D
+Bern;1353;1034977;5960;Bern;DF
+Freiburg;1481;318714;1671;Freiburg;DF
+Genf;0;499480;282;Genf;F
+Glarus;1352;40403;685;Glarus;D
+Graubünden;1803;198379;7105;Chur;DIR
+Jura;1979;73419;839;Delsberg;F
+Luzern;1332;409557;1494;Luzern;D
+Neuenburg;1815;176850;802;Neuenburg;F
+Nidwalden;1291;43223;276;Stans;D
+Obwalden;1291;37841;491;Sarnen;D
+Schaffhausen;1501;81991;298;Schaffhausen;D
+Schwyz;1291;159165;908;Schwyz;D
+Solothurn;1481;273194;790;Solothurn;D
+St. Gallen;1803;507697;2028;St.Gallen;D
+Tessin;1803;353343;2812;Bellinzona;I
+Thurgau;1803;276472;994;Frauenfeld;D
+Uri;1291;36433;1077;Altdorf;D
+Waadt;1803;799145;3212;Lausanne;F
+Wallis;1815;343955;5225;Sitten;DF
+Zug;1352;126837;239;Zug;D
+Zürich;1351;1520968;1729;Zürich;D

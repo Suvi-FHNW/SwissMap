@@ -1,11 +1,91 @@
+.root {
+    -fx-font-family: Georgia;
+    -fx-font-size: 18px;
+}
+
+.label {
+    -fx-padding: 20px;
+}
+
 .title {
     -fx-font-size: 24px;
-    -fx-font-family: Arial;
     -fx-font-weight: bolder;
     -fx-underline: true;
+    -fx-padding: 5px;
+}
+
+#name {
+    -fx-font-weight: bolder;
+    -fx-font-size: 24px;
+}
+
+#scrollpane {
+    -fx-background-color: #D1BC8A;
+}
+
+#boxCantonChoice {
+    -fx-background-color: #F9E4B7;
 }
 
 .list-content {
+    -fx-background-color: #F9E4B7;
     -fx-font-size: 18px;
-    -fx-font-family: Arial;
+    -fx-text-fill: #000000;
+    -fx-padding: 5px;
+    -fx-border-insets: 5px;
+    -fx-background-insets: 5px;
+}
+
+.list-content:hover {
+    -fx-cursor: hand;
+    -fx-background-color: #D1BC8A;
+}
+
+#portrait {
+    -fx-padding: 10px;
+}
+
+.button {
+    -fx-background-color: #F9E4B7;
+    -fx-border-color: black;
+    -fx-border-width: 2px;
+}
+
+.button:hover {
+    -fx-background-color: #D1BC8A;
+    -fx-cursor: hand;
+}
+
+#editable-info {
+    -fx-padding: 5px;
+}
+
+.scroll-pane {
+    -fx-background-color: black;
+}
+
+.scroll-bar:horizontal, .scroll-bar:vertical{
+    -fx-background-color:transparent;
+}
+
+.increment-button, .decrement-button {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.scroll-bar:horizontal .track,
+.scroll-bar:vertical .track{
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-background-radius: 0em;
+}
+
+.scroll-bar:horizontal .thumb,
+.scroll-bar:vertical .thumb {
+    -fx-background-color: white;
+    -fx-background-radius: 5em;
+}
+
+.scroll-pane > .corner {
+    -fx-background-color: black;
 }
